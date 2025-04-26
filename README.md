@@ -50,15 +50,34 @@ Finally, the circuit was integrated into a Quantum Neural Network (QNN) using Qi
 ---
 
 ## Implementation Steps
+
 1. **Data Preparation:**  
-   Splitting the dataset into training and testing subsets; applying normalization and feature transformation for quantum compatibility.
-2. **Quantum Model Construction:**  
-   Building the feature map, ansatz, and merging them into a quantum circuit.  
-   Deploying the EstimatorQNN for regression modeling.
-3. **Training:**  
-   Fine-tuning circuit parameters by minimizing a regression loss using a classical optimizer.
-4. **Evaluation:**  
-   Measuring performance on test data using Mean Squared Error (MSE) and R² metrics.
+Missing values were handled through appropriate imputation techniques.Input features and output targets were normalized using Min-Max scaling to bring all values within the [0,1] range.
+Feature selection was conducted by analyzing the correlation matrix to retain the most significant variables for modeling.
+
+2. **Quantum Circuit Design:**  
+  A hybrid quantum circuit was created by composing:
+  - ZFeatureMap for data encoding (2 repetitions),
+  - RealAmplitudes ansatz for trainable parameters (2 repetitions).
+  This circuit structure was carefully chosen to balance expressiveness and trainability.
+
+3. **Quantum Neural Network (QNN):**  
+  An EstimatorQNN was built using Qiskit primitives, where:
+  - The feature map parameters served as inputs,
+  - The ansatz parameters were optimized weights.
+  The circuit output expectation value was interpreted as the model's prediction.
+
+4. **Model Training:**  
+  A NeuralNetworkRegressor was employed, which wrapped the QNN.  
+  Optimization was performed using the SLSQP optimizer with a limit of 300 iterations.  
+  The objective was to minimize the prediction loss between the actual and predicted stock values.
+
+5. **Evaluation:**  
+  After training, the model was tested on unseen data.  
+  Predictions were inverse-transformed back to the original scale, and the model's performance was assessed using:
+  - Mean Squared Error (MSE),
+  - Mean Absolute Error (MAE),
+  - R-squared (R²) score.
 
 ---
 
