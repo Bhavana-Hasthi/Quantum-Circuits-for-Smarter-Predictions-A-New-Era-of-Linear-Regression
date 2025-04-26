@@ -1,4 +1,4 @@
-# Quantum-Circuits-for-Smarter-Predictions-A-New-Era-of-Linear-Regression
+# Quantum Circuits for Smarter Predictions-A New Era of Linear Regression
 
 ## Overview
 In this project, we explored the potential of Quantum Machine Learning (QML) for predictive modeling by applying Quantum Linear Regression on a large-scale dataset.  
