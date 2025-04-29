@@ -82,9 +82,9 @@ Feature selection was conducted by analyzing the correlation matrix to retain th
 ---
 
 ## Results
-- **Mean Squared Error (MSE):** ~0.1282
-- **Mean Absolute Error (MAE):** ~0.2290
-- **R² Score:** ~0.8059
+- **Mean Squared Error (MSE):** ~0.1276
+- **Mean Absolute Error (MAE):** ~0.2291
+- **R² Score:** ~0.8069
 - **Key Insights:**  
   - The quantum model achieved a positive R² on a large real-world dataset, indicating effective learning and prediction capabilities.  
   - Performance was comparable to classical regression models despite using a quantum simulator.  
