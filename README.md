@@ -94,7 +94,7 @@ Feature selection was conducted by analyzing the correlation matrix to retain th
 
 ## Conclusion
 Although quantum computing and its machine learning applications are still in the early stages of development, the results of this project demonstrate strong potential.
-The model achieved a Mean Squared Error (MSE) of 0.1691, a Mean Absolute Error (MAE) of 0.3946, and an impressive R-squared (R²) score of 0.7440.
+The model achieved a Mean Squared Error (MSE) of 0.1276, a Mean Absolute Error (MAE) of 0.2291, and an impressive R-squared (R²) score of 0.8069.
 This indicates that quantum-based approaches can not only learn meaningful patterns from large datasets but also deliver competitive predictive accuracy.
 With further optimization and advancements in quantum hardware, it is expected that the performance can be improved even further, opening up exciting opportunities for real-world deployment of quantum machine learning models.
 
